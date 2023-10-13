@@ -28,12 +28,12 @@
 
               <div class="field">
                 <div class="control has-text-centered">
-                  <button class="button is-primary">Submit</button>
+                  <button class="button is-primary">Log in</button>
                 </div>
               </div>
             </form>
             <hr>
-              Or <router-link to="/signup">Click here</router-link> to sign up.
+              Or <router-link to="/signup">click here</router-link> to sign up.
           </div>
         </div>
       </div>

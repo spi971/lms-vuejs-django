@@ -35,12 +35,12 @@
 
               <div class="field">
                 <div class="control has-text-centered">
-                  <button class="button is-primary">Submit</button>
+                  <button class="button is-primary">Sig up</button>
                 </div>
               </div>
             </form>
             <hr>
-              Or <router-link to="/login">Click here</router-link> to log in.
+              Or <router-link to="/login">click here</router-link> to log in.
           </div>
         </div>
       </div>

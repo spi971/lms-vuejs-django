@@ -15,17 +15,17 @@
 
         <div id="navbar-menu" class="navbar-menu" :class="{ 'is-active': active }">
             <div class="navbar-start">
-                <router-link to="/" class="navbar-item">Home</router-link>
-                <router-link to="/about" class="navbar-item">About</router-link>
+                <router-link to="/" class="navbar-item" @click="handleBurgerClick">Home</router-link>
+                <router-link to="/about" class="navbar-item" @click="handleBurgerClick">About</router-link>
             </div>
 
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <router-link to="/signup" class="button is-primary">
+                        <router-link to="/signup" class="button is-primary" @click="handleBurgerClick">
                             <strong>Sign up</strong>
                         </router-link>
-                        <router-link to="/login" class="button is-light">
+                        <router-link to="/login" class="button is-light" @click="handleBurgerClick">
                             Log in
                         </router-link>
                     </div>
@@ -40,7 +40,6 @@ let active = ref(false)
 
 const handleBurgerClick = () => {
     active.value = !active.value;
-    console.log(active);
 }
 </script>
 
