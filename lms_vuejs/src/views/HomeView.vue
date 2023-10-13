@@ -46,9 +46,7 @@
           </div>
 
           <div class="column is-12 has-text-centered">
-            <a class="button is-primary is-large is-responsive mt-4 mb-4" href="#">
-              Get started
-            </a>
+            <router-link to="/signup" class="button is-primary is-large is-responsive mt-4 mb-4">Get started</router-link>
           </div>
         </div>
       </div>

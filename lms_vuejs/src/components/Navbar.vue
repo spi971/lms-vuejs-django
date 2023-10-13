@@ -1,9 +1,9 @@
 <template>
     <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item is-size-4" href="/">
+            <router-link to="/" class="navbar-item is-size-4">
                 Learny
-            </a>
+            </router-link>
 
             <a role="button" class="navbar-burger" :class="{ 'is-active': active }" aria-label="menu" aria-expanded="false"
                 data-target="navbar-menu" @click="handleBurgerClick">
