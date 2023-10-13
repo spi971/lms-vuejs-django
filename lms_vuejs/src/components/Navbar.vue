@@ -4,29 +4,45 @@
             <a class="navbar-item is-size-4" href="/">
                 Learny
             </a>
+
+            <a role="button" class="navbar-burger" :class="{ 'is-active': active }" aria-label="menu" aria-expanded="false"
+                data-target="navbar-menu" @click="handleBurgerClick">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
 
-        <div id="navbar-item" class="navbar-menu">
+        <div id="navbar-menu" class="navbar-menu" :class="{ 'is-active': active }">
             <div class="navbar-start">
-                <a href="" class="navbar-item">Home</a>
-                <a href="" class="navbar-item">About</a>
+                <router-link to="/" class="navbar-item">Home</router-link>
+                <router-link to="/about" class="navbar-item">About</router-link>
             </div>
 
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary">
+                        <router-link to="/signup" class="button is-primary">
                             <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light">
+                        </router-link>
+                        <router-link to="/login" class="button is-light">
                             Log in
-                        </a>
+                        </router-link>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 </template>
+<script  setup>
+import { ref } from 'vue';
+let active = ref(false)
+
+const handleBurgerClick = () => {
+    active.value = !active.value;
+    console.log(active);
+}
+</script>
 
 <style lang="css" scoped>
 .navbar {
